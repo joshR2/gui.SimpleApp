@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 import gui.simpleAppController.simpleAppController;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.SpringLayout; //For Layout
 
 /**
  * 
@@ -15,6 +16,7 @@ public class GUIPanel extends JPanel
 	private simpleAppController baseController;
 	private JButton firstButton;
 	private JTextField firstTextField;
+	private SpringLayout baseLayout;
 	
 	public GUIPanel(simpleAppController baseController)
 	{
@@ -27,10 +29,14 @@ public class GUIPanel extends JPanel
 		setupLayout();
 		setupListeners();
 	}
-	
+	/**
+	 * Helper method to load all the GUI components into the panel
+	 */
 	private void setupPanel()
 	{
-		
+		this.setLayout(baseLayout);
+		this.add(firstButton);
+		this.add(firstTextField);
 	}
 	
 	private void setupLayout()
