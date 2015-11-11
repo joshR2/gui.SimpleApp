@@ -19,7 +19,9 @@ public class GUIFrame extends JFrame
 		basePanel = new GUIPanel(baseController);
 		setupFrame();
 	}
-	
+	/**
+	 * Required helper method to prepare the frame.
+	 */
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel); //must be first line of the setupFrame!

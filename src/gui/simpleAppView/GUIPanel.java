@@ -5,6 +5,9 @@ import gui.simpleAppController.simpleAppController;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout; //For Layout
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 /**
  * 
@@ -37,8 +40,13 @@ public class GUIPanel extends JPanel
 		this.setLayout(baseLayout);
 		this.add(firstButton);
 		this.add(firstTextField);
+		this.setBackground(Color.BLUE);
 	}
 	
+	/**
+	 * helper method for arranging the panel.
+	 * Dumping ground for generated code
+	 */
 	private void setupLayout()
 	{
 		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -98, SpringLayout.SOUTH, this);
@@ -49,6 +57,12 @@ public class GUIPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		firstButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				firstTextField.setText("Wow,this is the most amazing click event ever! WOW!");
+			}
+		});
 	}
 }
