@@ -1,6 +1,6 @@
 package gui.simpleAppController;
 
-import gui.view.GUIFrame;
+import gui.simpleAppView.GUIFrame;
 
 /**
  * AppController for the Simple Gui Application

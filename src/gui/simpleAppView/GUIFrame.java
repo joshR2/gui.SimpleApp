@@ -10,7 +10,8 @@ import gui.simpleAppController.simpleAppController;
  */
 public class GUIFrame extends JFrame
 {
-	private simpleAppControler baseController;
+	private simpleAppController baseController;
+	private GUIPanel basePanel;
 	
 	public GUIFrame(simpleAppController baseController)
 	{
